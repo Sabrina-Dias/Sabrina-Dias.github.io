@@ -1,0 +1,104 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: rgb(46, 38, 53);
+}
+body {
+  margin: 0;
+}
+button {
+  padding: 10px;
+}
+button:active {
+  box-shadow: 2px 3px 1px;
+  transform: translate(4px, 6px);
+}
+h1 {
+  background-color: red;
+}
+main {
+  display: flex;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 1200px;
+  background-color: rgb(238, 17, 17);
+}
+section {
+  width: 80vw;
+  height: 1200px;
+  background-color: rgb(238, 235, 78);
+}
+
+.borda {
+  border: 3px dashed rgb(20, 87, 36);
+}
+.padding {
+  padding: 15px;
+}
+.espaço {
+  padding: 10px;
+}
+
+.link-menu {
+  width: 100px;
+  max-height: 40px;
+}
+
+div.menu {
+  position: relative;
+  top: 12px;
+  left: -12px;
+  border: 2px solid black;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.link-menu:active div.menu {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+  }
+  section {
+    width: 100%;
+    height: auto;
+  }
+  main {
+    flex-direction: column;
+  }
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #15ff00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+/* 0% é onde começa a animação, ou seja nao sofre mudança, ja em 100% é o final,
+ja a rotarion 360 significa que o elemento é girado em um círculo completo de
+ 360 graus, fazendo-o voltar à sua posição original. na animação o 1s para dizer 
+ a duração da animação, linear para dizer q a velocidade é constante do inicio ao fim,
+ e infinite para repetir infinitas vezes*/
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
